@@ -1,0 +1,197 @@
+* /* Global Styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Section */
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(7, 12, 1);
+  color: white;
+}
+
+.center ul li {
+  list-style: none;
+  display: inline-flex;
+  margin: 0px 10px;
+  
+}
+
+/* Layout Adjustments */
+.title {
+  font-size: 1rem;
+  flex: 4;
+}
+
+.left, .center, .right {
+  border: 1px solid black;
+}
+
+.left {
+  flex: 2;
+}
+
+.center {
+  flex: 4;
+  cursor: pointer;
+}
+
+.search {
+  flex: 5;
+}
+
+.search input {
+  padding: 10px;
+  width: 100%;
+  max-width: 30rem;
+}
+
+/* Right section flex styling */
+.right {
+  flex: 4;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+/* Image Sections */
+.bannerSection img {
+  width: 100%;
+}
+
+.collectionSection img {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  height: auto;
+}
+
+/* Additional section styling */
+.Head {
+  background-color: pink;
+  display: flex;
+  align-items: center;
+}
+
+.womencollection {
+  display: flex;
+  width: 100px;
+}
+
+.bannerBox img {
+  width: 100%;
+}
+
+.women {
+  background-color: orange;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small Screens (Mobile) */
+@media screen and (max-width: 600px) {
+  .headerSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left, .center, .search, .right {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .collectionSection img {
+    width: 100%;
+    height: auto;
+  }
+
+  .womencollection {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 768px) {
+  .headerSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .left, .center, .search, .right {
+    flex: 1 1 48%;
+    margin-bottom: 10px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .collectionSection img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .womencollection {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Large Screens (Desktop) */
+@media screen and (min-width: 1024px) {
+  .headerSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .left {
+    flex: 2;
+  }
+
+  .center {
+    flex: 4;
+  }
+
+  .search {
+    flex: 5;
+  }
+
+  .right {
+    flex: 4;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .collectionSection img {
+    width: 400px;
+    height: 300px;
+  }
+}
+.Head {
+  text-align: center;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+.women{
+  text-align: center;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+.cart{
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
