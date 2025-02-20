@@ -1,4 +1,4 @@
-* /* Global Styles */
+/* Global Styles */
 * {
    margin: 0;
    padding: 0;
@@ -13,13 +13,13 @@
   padding: 10px;
   background-color: rgb(7, 12, 1);
   color: white;
+  flex-wrap: wrap;  /* Allows wrapping on small screens */
 }
 
 .center ul li {
   list-style: none;
   display: inline-flex;
   margin: 0px 10px;
-  
 }
 
 /* Layout Adjustments */
@@ -64,11 +64,25 @@
   width: 100%;
 }
 
+.collectionSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic grid for responsiveness */
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
 .collectionSection img {
   width: 100%;
   max-width: 400px;
-  padding: 10px;
+  padding: 5px;
   height: auto;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Hover effect */
+}
+
+.collectionSection img:hover {
+  transform: scale(1.05);
 }
 
 /* Additional section styling */
@@ -76,22 +90,34 @@
   background-color: pink;
   display: flex;
   align-items: center;
-}
-
-.womencollection {
-  display: flex;
-  width: 100px;
-}
-
-.bannerBox img {
-  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
 }
 
 .women {
   background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* Media Queries for Responsive Design */
+.bannerBox img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.womencollection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
 
 /* Small Screens (Mobile) */
 @media screen and (max-width: 600px) {
@@ -109,14 +135,10 @@
     width: 100%;
   }
 
-  .collectionSection img {
+  .collectionSection img,
+  .womencollection img {
     width: 100%;
-    height: auto;
-  }
-
-  .womencollection {
-    width: 100%;
-    justify-content: center;
+    max-width: 100%;
   }
 }
 
@@ -136,15 +158,10 @@
     width: 100%;
   }
 
-  .collectionSection img {
+  .collectionSection img,
+  .womencollection img {
     width: 100%;
-    max-width: 350px;
-    height: auto;
-  }
-
-  .womencollection {
-    width: 100%;
-    justify-content: center;
+    max-width: 300px;
   }
 }
 
@@ -179,19 +196,9 @@
     height: 300px;
   }
 }
-.Head {
-  text-align: center;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-}
-.women{
-  text-align: center;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-}
-.cart{
+
+/* Utility Class */
+.cart {
   cursor: pointer;
   transform-style: preserve-3d;
 }
